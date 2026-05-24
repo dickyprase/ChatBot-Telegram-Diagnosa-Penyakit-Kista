@@ -1,4 +1,5 @@
 import telebot
+import os
 from telebot import types
 from collections import Counter
 
@@ -6,7 +7,7 @@ user_dict = {}
 gejala = []
 diagnosa = 0
 cf = 0
-bot = telebot.TeleBot('1875878204:AAEu4JNZN-jjMsi0nSKvQXce0-bEDGmHCO4')
+bot = telebot.TeleBot(os.environ.get('BOT_TOKEN'))
 
 class User:
     def __init__(self, name):
